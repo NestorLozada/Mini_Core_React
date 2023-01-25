@@ -16,8 +16,8 @@ app.use('/api/clientes',require('./routes/clientsrouter'));
 app.use('/api/contratos', require('./routes/contratorouter'));
 
 //STATIC FILES 
-app.use(express.static(path.join(__dirname, 'public')))
-//app.use(express.static('./public/index.html'))
+app.use(express.static(path.join(__dirname, 'public', 'index.html')))
+console.log(path.join(__dirname, 'public', 'index.html'))
 //MESSAGE PORT
 app.listen(app.get('port'), () => {
     console.log( `Server on port ${app.get('port')}`)})
