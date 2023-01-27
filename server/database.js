@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const uri = 'mongodb://localhost/Lozada_minicore'
+const uri = process.env.MONGO_CONNECTION ||'mongodb://localhost/Lozada_minicore'
 
 mongoose.connect(uri)
     .then(db => console.log('DB is connected'))

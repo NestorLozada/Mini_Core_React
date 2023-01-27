@@ -14,6 +14,7 @@ router.post('/', async (req, res)=>{
     await clientes.save();
 
     console.log({status: 'Recivido'})
+    res.sendStatus(200)
 })
 
 module.exports = router;
